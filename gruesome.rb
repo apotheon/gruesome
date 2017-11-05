@@ -17,6 +17,7 @@ class Gruesome < Sinatra::Base
   get '/' do
     @page_title = 'The Grue'
     @content = RedRug.from_file make_path 'public/content/index.txt'
+    @footer = RedRug.from_file make_path 'public/content/footer.txt'
 
     erb :home
   end
